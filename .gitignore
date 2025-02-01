@@ -1,3 +1,4 @@
 env
 .DS_Store
 data_output.json
+.env
