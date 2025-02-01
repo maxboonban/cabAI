@@ -36,6 +36,6 @@ if response.status_code == 200:
     details_data = response.json()
     course_description = details_data.get("description", "No description available.")
     # print(f"CSCI 0081 (CRN: {crn}) - Description:\n{course_description}")
-    print(details_data)
+    print(details_data['description'])
 else:
     print(f"Failed to fetch details for CSCI 0081. Status code: {response.status_code}")
