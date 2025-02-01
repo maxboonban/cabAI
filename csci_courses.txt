@@ -1,0 +1,44 @@
+Course Code: AFRI 0370
+Title: African American Novels of the 1970s
+CRN: 28057
+Instructor: M. Ajibade
+Meeting Time: M 3-5:30p
+Detailed Meeting Times: [{"meet_day":"0","start_time":"1500","end_time":"1730"}]
+Start Date: 2025-01-22
+End Date: 2025-05-16
+Description: Literary historians generally agree that in <a href="/search/?p=the%201970s" data-action="result-detail" data-group="code:the 1970s"  class="notoffered">the 1970s</a>, in the U.S., there was a significant increase in the publication of diverse forms of African American literature. <a href="/search/?p=The%201970s" data-action="result-detail" data-group="code:The 1970s"  class="notoffered">The 1970s</a> is also often described by scholars as a decade in which there was a renaissance of African American women’s writing as well as the publication of several experimental African American literary works. In this seminar, we will study this lively period in African American literary history primarily through novels, some of them recently republished or adapted into other forms. What idea of African American literature do we get when we read novels from this era? What questions were asked in 1970s African American novels that we continue to ask now? Novels we will likely read include detective fiction, diaristic fiction, satirical fiction, a love story, and historical fiction.
+--------------------------------------------------
+
+Course Code: AFRI 0510
+Title: Love Stories in African Literature and Film
+CRN: 28067
+Instructor: M. Ajibade
+Meeting Time: TTh 2:30-3:50p
+Detailed Meeting Times: [{"meet_day":"1","start_time":"1430","end_time":"1550"},{"meet_day":"3","start_time":"1430","end_time":"1550"}]
+Start Date: 2025-01-22
+End Date: 2025-05-16
+Description: In African cinema and modern African literature, the genre of the love story is often used by artists as a medium for addressing various socio-political issues. In this seminar, we will discuss African love stories as complex narratives about romantic relationships, as political fiction, and as spaces where African artists reflect on romantic love, romantic desire, and the idea of romance. In what ways do African love stories published in the twentieth century still speak to us today? How do twenty-first century African artists use love stories to confront contemporary societal concerns?
+--------------------------------------------------
+
+Course Code: AFRI 0807
+Title: Racism, Segregation, Poverty and Public Education in the United States
+CRN: 27731
+Instructor: N. Rooks
+Meeting Time: W 3-5:30p
+Detailed Meeting Times: [{"meet_day":"2","start_time":"1500","end_time":"1730"}]
+Start Date: 2025-01-22
+End Date: 2025-05-16
+Description: Using film, podcasts, legal history, memoir, sociology and social history, this course focuses on the past and present state of education in the United States as it both produces and ameliorates social inequality. The course explores how both primary schools, as well as colleges and universities both reflect and reproduce inequalities of opportunity along race and class lines.
+--------------------------------------------------
+
+Course Code: AFRI 0840
+Title: Monuments, History, and Memory in the United States
+CRN: 27954
+Instructor: R. Ater
+Meeting Time: M 3-5:30p
+Detailed Meeting Times: [{"meet_day":"0","start_time":"1500","end_time":"1730"}]
+Start Date: 2025-01-22
+End Date: 2025-05-16
+Description: In the wake of the killing of George Floyd, monuments tied to the violent histories of slavery, colonialism, and white supremacy have received renewed interest and debate. Protestors and individuals have defaced, toppled, and petitioned for the removal of Confederate monuments and statues to the white male power elite. This symbolic retributive violence and sometimes ritual care signals a challenge to the long-lived monument. This reading course explores public monuments and the ways in which artists and communities have negotiated history and the politics of memory and remembrance in the United States. We will evaluate the meaning and purpose of monuments that define American public spaces, investigating the problematic narratives and historic controversies surrounding such objects. The removal of monuments asks us to question whose histories have been forgotten, ignored, or suppressed, and what monumental justice might look like.
+--------------------------------------------------
+

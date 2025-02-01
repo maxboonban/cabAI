@@ -29,7 +29,7 @@ response = requests.post(api_url, json=payload, headers=headers)
 # Check response
 if response.status_code == 200:
     data = response.json()  # Convert response to JSON
-    print(data)  # Print raw JSON data
+    print(data['results'][0])  # Print raw JSON data
 else:
     print(f"Failed to fetch data. Status code: {response.status_code}")
 
