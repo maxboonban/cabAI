@@ -13,7 +13,7 @@ srcdb = "202420"  # Change if necessary
 search_payload = {
     "other": {"srcdb": srcdb},
     "criteria": [
-        {"field": "keyword", "value": ""},  # Search for Computer Science courses
+        # {"field": "keyword", "value": ""},  # Search for Computer Science courses
         {"field": "is_ind_study", "value": "N"},  # Exclude independent study courses
         {"field": "is_canc", "value": "N"}  # Exclude canceled courses
     ]
