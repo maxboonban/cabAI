@@ -1,0 +1,52 @@
+Requirements for the Standard Track of the Sc.B. degree:
+
+Calculus prerequisite: students must complete or place out of second semester calculus.: 
+MATH 0100: Single Variable Calculus, Part II
+or MATH 0170: Single Variable Calculus, Part II (Accelerated)
+or MATH 0190: Single Variable Calculus, Part II (Physics/Engineering)
+Concentration Requirements: 
+Core-Computer Science:: 
+Select one of the following introductory course Series:: 2
+Series A: 
+CSCI 0150& CSCI 0200: Introduction to Object-Oriented Programming and Computer Scienceand Program Design with Data Structures and Algorithms
+Series B: 
+CSCI 0170& CSCI 0200: Computer Science: An Integrated Introductionand Program Design with Data Structures and Algorithms
+Series C: 
+CSCI 0190: Accelerated Introduction to Computer Science
+AND: 
+an additional CS course not otherwise used to satisfy a concentration requirement; this course may be CSCI 0200, a Foundations course, or a 1000-level course.: 
+Series D 1: 
+CSCI 0111& CSCI 0112& CSCI 0200: Computing Foundations: Dataand Computing Foundations: Program Organizationand Program Design with Data Structures and Algorithms
+Introductory Math Foundations: 1
+CSCI 0220: Introduction to Discrete Structures and Probability
+or APMA 1650: Statistical Inference I
+or CSCI 1450: Advanced Introduction to Probability for Computing and Data Science
+or MATH 1530: Abstract Algebra
+Foundations Courses: 
+ScB students must take one course from each foundation area.: 
+Foundations Areas: 
+a. Algorithms/Theory Foundations (Choose one): 1
+CSCI 0500: Data Structures, Algorithms, and Intractability: An Introduction
+CSCI 1010: Theory of Computation
+CSCI 1550: Probabilistic Methods in Computer Science
+CSCI 1570: Design and Analysis of Algorithms
+b. AI/Machine Learning/Data Science Foundations: 1
+CSCI 1410: Artificial Intelligence
+or CSCI 1420: Machine Learning
+or CSCI 1430: Computer Vision
+or CSCI 1460: Computational Linguistics
+or CSCI 1470: Deep Learning
+or CSCI 1951A: Data Science
+c. Systems Foundations: 1
+CSCI 0300: Fundamentals of Computer Systems
+or CSCI 0330: Introduction to Computer Systems
+CSCI Electives: 5
+Five CSCI courses at the 1000 level 2: 
+Four Additional Electives.  These can include:: 4
+CSCI 0320: Introduction to Software Engineering
+1000-level and 2000-level CSCI courses (no more than three arts/policy/humanities courses): 
+Linear algebra (MATH 0520, MATH 0540, or APMA 0260): 
+Approved 1000-level courses outside of CS (see the concentration handbook for the current list): 
+Capstone: 
+A capstone taken in the senior year (from the list of approved capstone courses in the concentration handbook). The capstone may also be used to satisfy another requirement.: 
+Total Credits: 15
