@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C@B AI - Chatbot</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/chat.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="nav-container">
+        <nav class="navbar">
+            <a href="/" class="logo">
+                C@B AI
+            </a>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#">About</a></li>
+                <li class="nav-item"><a href="#">Tutorial</a></li>
+                <li class="nav-item"><a href="#">Demo</a></li>
+            </ul>
+            <button class="sign-in">
+                <a href="#" class="btn-primary">
+                    <i class="fas fa-sign-in-alt icon"></i> Sign in
+                </a>
+            </button>
+        </nav>
+    </div>
+
+    <section class="chat-container">
+        <div class="chat-header">
+            <h2>Chat with your AI Advisor!</h2>
+        </div>
+
+        <div class="chat-window" id="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text" id="question" class="chat-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <button class="send-btn" onclick="askQuestion()">Send</button>
+        </div>
+    </section>
+
+    <script>
+        async function askQuestion() {
+            const questionInput = document.getElementById("question");
+            const question = questionInput.value.trim();
+            if (!question) return;
+
+            appendMessage(question, "user-message");
+            questionInput.value = "";
+
+            // Call your backend API here. Example endpoint: "/ask"
+            const response = await fetch("/ask", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ question })
+            });
+
+            const data = await response.json();
+            appendMessage(data.answer, "bot-message");
+        }
+
+        function appendMessage(text, className) {
+            const chatBox = document.getElementById("chat-box");
+            const messageDiv = document.createElement("div");
+            messageDiv.className = `message ${className}`;
+            messageDiv.innerText = text;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                askQuestion();
+            }
+        }
+    </script>
+</body>
+</html>

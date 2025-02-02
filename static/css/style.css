@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary-blue: #1E3A8A; /* Deep blue */
+    --light-blue: #60A5FA; /* Light blue */
+    --gradient: linear-gradient(to right, #1E3A8A, #9333EA); /* Blue to purple gradient */
+    --white: #FFFFFF;
+    --font: "Inter", sans-serif;
+    --font-size: 16px;
+    --soft-gray: #B5B5B5;
+    --light-gray: #F3F4F6;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--font);
+    background-color: #F3F4F6;
+    color: var(--primary-blue);
+    font-size: var(--font-size);
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+.nav-container {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #D3D3D3;
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 40px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: uppercase;
+    background-clip: text;
+    color: transparent;
+    background-image: var(--gradient);
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.nav-item a {
+    color: transparent;
+    background-clip: text;
+    background-image: var(--gradient);
+    font-weight: 500;
+}
+
+.sign-in {
+    padding: 8px 12px;
+    background-image: var(--gradient);
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.sign-in a {
+    color: var(--white);
+}
+
+.sign-in:hover {
+    scale: 1.05;
+    background-image: linear-gradient(to right, #9333EA, #1E3A8A);
+}
+
+.hero-container {
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: grid;
+    place-content: center;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.hero button {
+    padding: 12px 24px;
+    background-image: var(--gradient);
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.hero button:hover {
+    scale: 1.05;
+    background-image: linear-gradient(to right, #9333EA, #1E3A8A);
+}
+
+.hero button a {
+    text-decoration: none;
+    color: var(--white);
+}
