@@ -113,6 +113,6 @@
 }
 
 .send-btn:hover {
-    scale: 1.05;
+    scale: 1.06;
     background-image: linear-gradient(to right, #9333EA, #1E3A8A);
 }
