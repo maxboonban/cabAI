@@ -6,20 +6,24 @@
   <title>Brown University Course Selection Chatbot</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* Reset & Global Styles */
+    /* Global Reset & Base Styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-    body {
+    html, body {
+      height: 100%;
       font-family: 'Inter', sans-serif;
-      background: #f5f5f5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
       overflow: hidden;
+    }
+    /* Dynamic background: initial gradient centered at 50% 50% */
+    body {
+  background: url('static/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
     }
     /* Chat Container */
     .chat-container {
@@ -32,6 +36,8 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      position: relative;
+      z-index: 1; /* ensure chat UI stays above the background */
     }
     .header {
       background: #f8f9fa;
@@ -131,6 +137,14 @@
   </div>
 
   <script>
+    // // Update the background gradient based on the mouse position
+    // document.addEventListener('mousemove', function(e) {
+    //   const posX = ((e.clientX / window.innerWidth) * 100).toFixed(2);
+    //   const posY = ((e.clientY / window.innerHeight) * 100).toFixed(2);
+    //   document.body.style.background = `radial-gradient(circle at ${posX}% ${posY}%, #5C3A21, #FFFDD0)`;
+    // });
+
+    // Chatbot functions
     async function askQuestion() {
       const questionInput = document.getElementById("question");
       const question = questionInput.value.trim();
@@ -139,7 +153,7 @@
       appendMessage(question, "user-message");
       questionInput.value = "";
 
-      // Call your backend API here. Example endpoint: "/ask"
+      // Replace "/ask" with your backend API endpoint
       const response = await fetch("/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
