@@ -27,6 +27,18 @@ def main():
     embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
     vector_store = InMemoryVectorStore(embeddings)
 
+
+    path = "output.txt"  # Path to your .txt file
+
+    loader = TextLoader(file_path=path)
+
+    docs = loader.load()
+
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=20)
+    all_splits = text_splitter.split_documents(docs)
+
+    _ = vector_store.add_documents(documents=all_splits)
+
     # path = "csci_courses_with_descriptions.json"
 
     # loader = JSONLoader(
@@ -47,6 +59,25 @@ def main():
     all_splits = text_splitter.split_documents(docs)
 
     _ = vector_store.add_documents(documents=all_splits)
+
+    from langgraph.graph import MessagesState, StateGraph
+
+    graph_builder = StateGraph(MessagesState)
+
+    from langchain_core.tools import tool
+
+
+    @tool(response_format="content_and_artifact")
+    def retrieve(query: str):
+        """Retrieve information related to a query."""
+        retrieved_docs = vector_store.similarity_search(query, k=2)
+        serialized = "\n\n".join(
+            (f"Source: {doc.metadata}\n" f"Content: {doc.page_content}")
+            for doc in retrieved_docs
+        )
+        return serialized, retrieved_docs
+
+
     prompt = hub.pull("rlm/rag-prompt")
 
     def retrieve(state: State):
@@ -65,9 +96,10 @@ def main():
     graph = graph_builder.compile()
     
 
-   
-    response = graph.invoke({"question": "I have to learn visual computing, what courses should i focus on?"})
-    print(response["answer"])
+    for i in range(10):
+        ask = input('ASK : ')
+        response = graph.invoke({"question": ask})
+        print(response["answer"])
 
 
 if __name__=='__main__':
