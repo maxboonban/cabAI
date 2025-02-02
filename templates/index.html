@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brown University Course Selection Chatbot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset & Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    /* Chat Container */
+    .chat-container {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 480px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .header {
+      background: #f8f9fa;
+      padding: 16px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    /* Chat Box */
+    .chat-box {
+      flex: 1;
+      padding: 16px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .message {
+      padding: 12px 16px;
+      border-radius: 16px;
+      max-width: 80%;
+      word-wrap: break-word;
+      transition: background-color 0.2s ease;
+    }
+    .user-message {
+      align-self: flex-end;
+      background: #007bff;
+      color: #fff;
+      border-bottom-right-radius: 0;
+    }
+    .bot-message {
+      align-self: flex-start;
+      background: #e5e5ea;
+      color: #000;
+      border-bottom-left-radius: 0;
+    }
+    /* Input Section */
+    .input-container {
+      padding: 16px;
+      border-top: 1px solid #e0e0e0;
+      background: #f8f9fa;
+      display: flex;
+      gap: 10px;
+    }
+    .input-container input {
+      flex: 1;
+      padding: 12px 16px;
+      border: 1px solid #ccc;
+      border-radius: 16px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .input-container input:focus {
+      border-color: #007bff;
+    }
+    .input-container button {
+      padding: 0 20px;
+      border: none;
+      border-radius: 16px;
+      background: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .input-container button:hover {
+      background: #0056b3;
+    }
+    /* Mobile Responsiveness */
+    @media (max-width: 480px) {
+      .chat-container {
+        height: 100vh;
+        border-radius: 0;
+      }
+      .header {
+        font-size: 16px;
+        padding: 12px;
+      }
+      .input-container input, .input-container button {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="header">Course Selection Chatbot</div>
+    <div class="chat-box" id="chat-box">
+      <!-- Chat messages will appear here -->
+    </div>
+    <div class="input-container">
+      <input type="text" id="question" placeholder="Ask your course query..." onkeypress="handleKeyPress(event)" />
+      <button onclick="askQuestion()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    async function askQuestion() {
+      const questionInput = document.getElementById("question");
+      const question = questionInput.value.trim();
+      if (!question) return;
+
+      appendMessage(question, "user-message");
+      questionInput.value = "";
+
+      // Call your backend API here. Example endpoint: "/ask"
+      const response = await fetch("/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question })
+      });
+      const data = await response.json();
+      appendMessage(data.answer, "bot-message");
+    }
+
+    function appendMessage(text, className) {
+      const chatBox = document.getElementById("chat-box");
+      const messageDiv = document.createElement("div");
+      messageDiv.className = `message ${className}`;
+      messageDiv.innerText = text;
+      chatBox.appendChild(messageDiv);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === "Enter") {
+        askQuestion();
+      }
+    }
+  </script>
+</body>
+</html>
