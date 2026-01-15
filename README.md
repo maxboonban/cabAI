@@ -1,24 +1,20 @@
-# C@B-GPT
-<img src="static/SS.png" style="height:500px"></img>
+# HazardWatch Live Dashboard
 
-Forget the medieval Courses @ Brown site! We bring you the means to tailor your own coursework!
-### Data
+A real-time disaster monitoring dashboard that surfaces live conditions for:
+- Earthquakes
+- Flood risk
+- Heat wave risk
+- Landslides
+- Temperature
+- Rainfall
 
-We have scraped the Courses @ Brown website for relevant details of each course - we further took this forward by iterating over Google queries and parsing the most relevant links to each course
+Data is sourced live from Open-Meteo and the USGS Earthquake API.
 
+## Setup
 
-### How to set your keys for inference 
-```
-touch .env
-LANGSMITH_TRACING="true"
-LANGSMITH_API_KEY="..."
-OPENAI_API_KEY=
-```
-
-### Usage
-```
+```bash
 pip install -r requirements.txt
 python main.py
 ```
-### Future plans!
-Scale it for your nearest university!
+
+Visit: `http://localhost:4000`
